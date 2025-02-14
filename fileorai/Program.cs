@@ -13,6 +13,7 @@
 			//erossegMeghaladja(karakterek);
 
 			karakterStat(karakterek, 9);
+			adatMentes(karakterek);
 
 			foreach(var item in karakterek)
 			{
@@ -96,6 +97,19 @@
 					Console.WriteLine("Magasabb szint a limitnel: " + adat);
 				}
 			}
+		}
+
+		static void adatMentes(List<Karakter> karakterek)
+		{
+			for (int i = 0; i < karakterek.Count; i++)
+			{
+				Karakter item = karakterek[i];
+				
+				File.WriteAllText("./karakterekWrite.csv", item.ToString());
+			}
+				
+			
+			
 		}
 
 
