@@ -8,9 +8,10 @@
 					 List<Karakter> karakterek = [];
 
 			fileBeolvas("karakterek.txt",karakterek);
+			atlagosSzint(karakterek);
 			foreach(var item in karakterek)
 			{
-				Console.WriteLine(item);
+				//Console.WriteLine(item);
 
 			}
 			
@@ -33,6 +34,22 @@
 
 
 		}
+
+		static void atlagosSzint(List<Karakter> karakterek)
+		{
+			double atlag = 0;
+			int count = 0;
+			for(int i = 0; i < karakterek.Count; i++)
+			{
+				count += karakterek[i].Szint;
+				
+			}	
+			atlag = count / karakterek.Count;
+			Console.WriteLine(atlag);
+
+		}
+
+
 
 		
 		
