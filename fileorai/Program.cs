@@ -10,6 +10,7 @@
 			fileBeolvas("karakterek.txt",karakterek);
 			atlagosSzint(karakterek);
 			legmagasabbEletero(karakterek);
+			erossegMeghaladja(karakterek);
 
 			foreach(var item in karakterek)
 			{
@@ -67,6 +68,22 @@
 
 			Console.WriteLine("Legtobb elettel rendelkezo karakter: " + legtobbElet);
 		}
+
+		static void erossegMeghaladja(List<Karakter> karakterek)
+		{
+			for (int i = 0;i < karakterek.Count ; i++)
+			{
+				if (karakterek[i].Ero > 50)
+				{
+					Console.WriteLine("true");
+				}
+				else
+				{
+					Console.WriteLine("false");
+				}
+			}
+		}
+
 
 
 
