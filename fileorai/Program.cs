@@ -9,6 +9,8 @@
 
 			fileBeolvas("karakterek.txt",karakterek);
 			atlagosSzint(karakterek);
+			legmagasabbEletero(karakterek);
+
 			foreach(var item in karakterek)
 			{
 				//Console.WriteLine(item);
@@ -48,6 +50,25 @@
 			Console.WriteLine(atlag);
 
 		}
+		static void legmagasabbEletero(List<Karakter> karakterek)
+		{
+			Karakter legtobbElet = karakterek[0];
+			for (int i = 0;i < karakterek.Count;i++)
+			{
+				
+
+				if (karakterek[i].Eletero > legtobbElet.Eletero)
+				{
+					legtobbElet = karakterek[i];
+				}
+			
+			}
+			
+
+			Console.WriteLine("Legtobb elettel rendelkezo karakter: " + legtobbElet);
+		}
+
+
 
 
 
