@@ -8,9 +8,11 @@
 					 List<Karakter> karakterek = [];
 
 			fileBeolvas("karakterek.txt",karakterek);
-			atlagosSzint(karakterek);
-			legmagasabbEletero(karakterek);
-			erossegMeghaladja(karakterek);
+			//atlagosSzint(karakterek);
+			//legmagasabbEletero(karakterek);
+			//erossegMeghaladja(karakterek);
+
+			karakterStat(karakterek, 9);
 
 			foreach(var item in karakterek)
 			{
@@ -84,7 +86,17 @@
 			}
 		}
 
-
+		static void karakterStat(List<Karakter> karakterek, int szintLimit)
+		{
+			for(int i = 0; i < karakterek.Count; i++)
+			{
+				Karakter adat = karakterek[i];
+				if (karakterek[i].Szint > szintLimit)
+				{
+					Console.WriteLine("Magasabb szint a limitnel: " + adat);
+				}
+			}
+		}
 
 
 
